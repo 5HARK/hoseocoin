@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  iroha-ansible-deploy:
+    build:
+      context: ..
+      dockerfile: ./docker/Dockerfile
+    volumes:
+      - "/tmp:/tmp"
+      - "../ansible:/usr/src/app/ansible"
+      - "../keypair:/usr/src/app/keypair"
+    entrypoint: tail -f /etc/passwd
+    networks:
+      - network
+
+networks:
+  network:

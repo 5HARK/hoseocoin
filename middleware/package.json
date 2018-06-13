@@ -1,0 +1,19 @@
+{
+  "name": "hoseocoin_middleware",
+  "version": "0.0.1",
+  "description": "HoseoCoin middleware",
+  "author": "Kyuhyun Shin <blgf6190@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.1",
+    "iroha-lib": "0.0.6",
+    "redis": "^2.8.0",
+    "simple-encryptor": "^1.3.0",
+    "tweetnacl": "^1.0.0",
+    "tweetnacl-util": "^0.15.0"
+  }
+}

@@ -1,0 +1,43 @@
+page-tx-list {
+    .search-box{
+	margin-bottom: 2rem !important;
+	*{
+	    margin-top: 0 !important;
+	    margin-bottom: 0 !important;
+	}
+    }
+
+    .tx-header {
+	text-align: center !important;
+    }
+
+    ion-list-header {
+	padding-left: 0 !important;
+	margin-bottom: 0 !important;
+	// border-bottom-color: rgb(0, 0, 0) !important;
+	// border-bottom-width: 1px !important;
+	// border-bottom-style: solid !important;
+	border-top-color: rgb(222, 222, 222) !important;
+	border-top-width: 1px !important;
+	border-top-style: solid !important;
+    }
+
+    
+    ion-list {
+	ion-label {
+	    margin: 0 !important;
+	}
+
+	ion-item {
+	    margin-top: 8px !important;
+	    margin-bottom: 8px !important;
+	    padding-right: 16px !important;
+	    .item-inner {
+		// border-top-color: rgb(222, 222, 222) !important;
+		// border-top-width: 1px !important;
+		// border-top-style: inset !important;
+		border-bottom-style:dotted !important;
+	    }
+	}
+    }
+}

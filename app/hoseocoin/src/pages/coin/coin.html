@@ -1,0 +1,47 @@
+<!--
+  Generated template for the CoinPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title><ion-icon name="md-finger-print"></ion-icon> Hoseocoin</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)" >
+    <ion-refresher-content
+	pullingText="당기면 새로고침"
+	refreshingText="새로고침중..." >
+    </ion-refresher-content>
+  </ion-refresher>
+  <span class="balance"> {{ balance | currency:' ':'symbol':'1.0' }}</span>
+  <form [formGroup]="cointowon_form">
+    <ion-list inset>
+      <ion-item>
+	<ion-label>원화 환급할 코인 액수</ion-label>
+	<ion-input type="number" formControlName="won" min="0" (input)="onChangeCoinToWon($event)"></ion-input>
+      </ion-item>
+      <ion-item>
+	<ion-label stacked>지불 메시지-원화 지불시 필수 기재</ion-label>
+	<ion-input type="text" formControlName="desc"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button class="submit-btn" full type="submit" [disabled]="!cointowon_form.valid" (click)="submitCoinToWon()" >확인</button>
+  </form>
+
+  <form [formGroup]="wontocoin_form">
+    <ion-list inset>
+      <ion-item>
+	<ion-label>코인 충전할 원화 액수</ion-label>
+	<ion-input type="number" formControlName="won" min="0" (input)="onChangeWonToCoin($event)"></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button class="submit-btn" full type="submit" [disabled]="!wontocoin_form.valid" (click)="submitWonToCoin()" >확인</button>
+  </form>
+</ion-content>
